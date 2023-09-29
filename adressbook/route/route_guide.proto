@@ -1,0 +1,13 @@
+syntax = "proto3";
+package route;
+import "tutorial/addressbook.proto";
+
+
+
+service RouteGuide{
+	rpc GetPerson(IdInBook) returns(tutorial.Person){}
+};
+
+message IdInBook{
+	int32 number = 1;
+}
